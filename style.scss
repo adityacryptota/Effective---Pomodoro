@@ -141,22 +141,50 @@ input, button, input:active {
 
 /* Animations */
 
-@keyframes bubble {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(2);
-        opacity: 0;
-    }
-}
-
 @keyframes move {
     0% {
         transform: translateX(-100%);
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+
+// Media query
+
+@media only screen and (max-width: 1200px) {
+    .main-content {
+        &-left {
+            .start {
+                left: 47%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1111px) {
+    .main-content {
+        &-left {
+            .start {
+                top: 29%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 931px) {
+    .container {
+        padding: 2rem;
+    }
+}
+
+@media only screen and (max-width: 727px) {
+    .main-content {
+        &-left {
+            .start {
+                top: 26%;
+            }
+        }
     }
 }
