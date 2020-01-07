@@ -47,6 +47,7 @@ play.addEventListener('click', ()=> {
         progresss.classList.add('animate-progress');
         play.style.backgroundColor = 'green';
         smallMessage.textContent = `Timer has been started...`;
+        smallMessage.style.fontWeight = 'bold';
     }
 });
 

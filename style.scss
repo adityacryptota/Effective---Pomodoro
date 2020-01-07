@@ -73,7 +73,6 @@ body {
     &-right {
         transition: all 0.2s;
         width: 50%;
-        // border: 2px solid black;
         padding: 2rem;
         box-shadow: 0 15px 30px 10px rgb(209, 207, 207);
         border-radius: 2rem;
@@ -103,9 +102,7 @@ body {
 .anim-progress {
     width: 100%;
     height: 3rem;
-    // border: 2px solid black;
     display: flex;
-    // justify-content: center;
     align-items: center;
     overflow: hidden;
     margin-bottom: 1rem;
@@ -115,7 +112,6 @@ body {
     .progress {
         height: 10rem;
         width: 100%;
-        // border-radius: 50%;
         background-color: red;
         will-change: transform;
         transform: translateX(-100%);
@@ -137,6 +133,10 @@ input, button, input:active {
     border-radius: 2rem;
     border: 1px solid rgb(209, 207, 207);
     outline: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 /* Animations */
@@ -163,15 +163,15 @@ input, button, input:active {
     }
 }
 
-@media only screen and (max-width: 1111px) {
-    .main-content {
-        &-left {
-            .start {
-                top: 29%;
-            }
-        }
-    }
-}
+// @media only screen and (max-width: 1111px) {
+//     .main-content {
+//         &-left {
+//             .start {
+//                 top: 29%;
+//             }
+//         }
+//     }
+// }
 
 @media only screen and (max-width: 931px) {
     .container {
@@ -180,10 +180,75 @@ input, button, input:active {
 }
 
 @media only screen and (max-width: 727px) {
+    .container {
+        height: 100%;
+    }
     .main-content {
         &-left {
             .start {
-                top: 26%;
+                top: 39%;
+                left: 46%;
+            }
+        }
+
+        &-right {
+            .list {
+                height: 8rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 621px) {
+
+    .container {
+
+        h1 {
+            margin-bottom: 2rem;
+        }
+    }
+    .main-content {
+        flex-direction: column;
+        margin-bottom: 0;
+
+        &-left, &-right {
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+
+        &-right {
+            .list {
+                height: auto;
+            }
+        }
+
+        &-left {
+            margin-right: 0;
+            align-items: center;
+
+            .start {
+                top: 56%;
+                left: 47.5%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 418px) {
+    .main-content{
+        &-left {
+            .start {
+                left: 46.5%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1648px) {
+    .main-content{
+        &-left {
+            .start {
+                left: 48.5%;
             }
         }
     }
